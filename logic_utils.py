@@ -1,4 +1,4 @@
-def get_range_for_difficulty(difficulty: str):
+def get_range_for_difficulty(difficulty: str): #FIX: Refactored logic into logic_utils.py using agent mode
     if difficulty == "Easy":
         return 1, 20
     if difficulty == "Normal":
@@ -8,7 +8,7 @@ def get_range_for_difficulty(difficulty: str):
     return 1, 100
 
 
-def parse_guess(raw: str):
+def parse_guess(raw: str): #FIX: Refactored logic into logic_utils.py using agent mode
     if raw is None:
         return False, None, "Enter a guess."
 
@@ -26,16 +26,16 @@ def parse_guess(raw: str):
     return True, value, None
 
 
-def check_guess(guess, secret):
+def check_guess(guess, secret): #FIX: Refactored logic into logic_utils.py using agent mode
     if guess == secret:
         return "Win", "🎉 Correct!"
 
     try:
-        if guess > secret:
+        if guess > secret: #FIX: Updated hints for correctness using agent mode.
             return "Too High", "📉 Go LOWER!"
         else:
             return "Too Low", "📈 Go HIGHER!"
-    except TypeError:
+    except TypeError: #FIX: Updated hints for correctness and cast to int for proper comparison using agent mode.
         g, s = int(guess), int(secret)
         if g == s:
             return "Win", "🎉 Correct!"
@@ -44,7 +44,7 @@ def check_guess(guess, secret):
         return "Too Low", "📈 Go HIGHER!"
 
 
-def update_score(current_score: int, outcome: str, attempt_number: int):
+def update_score(current_score: int, outcome: str, attempt_number: int): #FIX: Refactored logic into logic_utils.py using agent mode
     if outcome == "Win":
         points = 100 - 10 * (attempt_number + 1)
         if points < 10:
