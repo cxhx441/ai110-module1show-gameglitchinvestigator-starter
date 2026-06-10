@@ -3,7 +3,7 @@
 ## 🚨 The Situation
 
 You asked an AI to build a simple "Number Guessing Game" using Streamlit.
-It wrote the code, ran away, and now the game is unplayable. 
+It wrote the code, ran away, and now the game is unplayable.
 
 - You can't win.
 - The hints lie to you.
@@ -26,18 +26,22 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game's purpose is to prompt a user to guess a specific number within a certain range and within a certain number of attempts. The game provides hints on incorrect guesses and a congratulations message on a correct guess.
 - [ ] Detail which bugs you found.
+The hints for incorrect guesses were flipped (e.g. guess too high and the game says to go higher).
 - [ ] Explain what fixes you applied.
+The hint string was fixed in the function that parses the guess.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. A user enters a number that happens to be too low.
+2. The hints are on, and the hint is that they should go higher.
+3. A user enters a number that happens to be too high.
+4. The hints are on, and the hint is that they should go lower.
+5. A user enters the secret number.
+5. Balloons fly and a congratulations message is displayed.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 

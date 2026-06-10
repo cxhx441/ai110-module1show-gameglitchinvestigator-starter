@@ -50,7 +50,7 @@ I wrote a pytest (with the help of claude) and confirmed the asserts made sense.
   and what it showed you about your code.
 One test was to check that the hint string was correct. It showed that the original code was incorrect. This was also shown in the manual testing I did and the original 3 test already in the file.
 - Did AI help you design or understand any tests? How?
-Yes I asked claude to write pytests for the 3 functions we fixed. It added them to the pytest file and then even gave me a bash command to run pytest. 
+Yes I asked claude to write pytests for the 3 functions we fixed. It added them to the pytest file and then even gave me a bash command to run pytest.
 
 ---
 
@@ -64,5 +64,8 @@ Yes I asked claude to write pytests for the 3 functions we fixed. It added them 
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+Don't follow the ai blindly. Accept changes in small chunks. It may try to make huge (and possibly incorrect) changes.
 - What is one thing you would do differently next time you work with AI on a coding task?
+I will try to constrain it more. Instead of "refactor these functions from this file to this file", i'll say "take this function from this file and add it to this file but no more"
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+I used to think AI was slop now I think it's top. It found causes of bugs I hadn't even considered yet. 
