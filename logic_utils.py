@@ -35,13 +35,13 @@ def check_guess(guess, secret):
             return "Too High", "📉 Go LOWER!"
         else:
             return "Too Low", "📈 Go HIGHER!"
-    except TypeError: # FIXME: Logic breaks here
-        g = str(guess)
-        if g == secret:
+    except TypeError:
+        g, s = int(guess), int(secret)
+        if g == s:
             return "Win", "🎉 Correct!"
-        if g > secret:
-            return "Too High", "📈 Go HIGHER!"
-        return "Too Low", "📉 Go LOWER!"
+        if g > s:
+            return "Too High", "📉 Go LOWER!"
+        return "Too Low", "📈 Go HIGHER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
